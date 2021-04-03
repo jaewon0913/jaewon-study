@@ -14,4 +14,10 @@ public class WebController {
         return "index";
     }
 
+    @GetMapping("/finish")
+    public String finish(){
+
+        return "finish";
+    }
+
 }
