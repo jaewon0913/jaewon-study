@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="~{layout/layout}">
+
+<th:block layout:fragment="content">
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+        <h1>reCAPTCHA V2 사용하기</h1>
+        <hr/>
+
+        <div align="center">
+            <h5>reCAPTCHA V2 로그인 성공</h5>
+
+            <table th:object="${member}" style="border:1px solid;">
+                <tbody>
+                    <tr>
+                        <th>아이디</th>
+                        <td th:text="*{memberId}"></td>
+                    </tr>
+                    <tr>
+                        <th>비밀번호</th>
+                        <td th:text="*{memberPw}"></td>
+                    </tr>
+                    <tr>
+                        <th>이름</th>
+                        <td th:text="*{name}"></td>
+                    </tr>
+                    <tr>
+                        <th>성별</th>
+                        <td th:text="*{gender}"></td>
+                    </tr>
+                    <tr>
+                        <th>나이</th>
+                        <td th:text="*{age}"></td>
+                    </tr>
+                    <tr>
+                        <th>직업</th>
+                        <td th:text="*{job}"></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</th:block>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="~{layout/layout}">
+
+<th:block layout:fragment="content">
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+        <h1>reCAPTCHA V2 사용하기</h1>
+        <h3>정리 : <a href="https://dev-jwblog.tistory.com/35">개발블로그</a></h3>
+        <hr/>
+
+        <div>
+            <input type = "text" id="loginId" name="memberId" placeholder="a@b.c" style="width:250px; height:30px;">
+        </div>
+        <br>
+        <div>
+            <input type = "password" id="loginPw" name="memberPw" placeholder="비밀번호" style="width:250px; height:30px;">
+        </div>
+        <br>
+        <div id="g-recaptcha"></div>
+        <br>
+        <div>
+            <input type="button" class="disabled-btn" id="loginBtn" value="로그인" disabled>
+        </div>
+
+        <br>
+        <div style="border:1px solid">
+            <p>계정</p>
+            <p>아이디: testId@test.com 비밀번호: test1234</p>
+            <p>아이디: adminId@admin.com 비밀번호: admin1234</p>
+            <p>아이디: userId@user.com 비밀번호: user1234</p>
+        </div>
+    </div>
+
+
+    <!-- jquery -->
+    <script th:src="@{/js/jquery-3.2.1.min.js}"></script>
+    <script th:src="@{/js/spring/recaptcha.js}"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <script type="text/javascript">
+        //	화면 시작 시 g-recaptcha 생성
+        var onloadCallback = function() {
+            grecaptcha.render('g-recaptcha', {
+                'sitekey' : '6Ldto5saAAAAALjQt_YLT6L11O3NNFKcjgggPMb-',
+                'callback' : verifyCallback,
+                'expired-callback' : expiredCallback,
+            });
+        };
+
+        //	인증 성공 시
+        var verifyCallback = function(response) {
+            $("#loginBtn").removeClass("disabled-btn");
+            $("#loginBtn").attr("disabled", false);
+        };
+
+        //	인증 만료 시
+        var expiredCallback = function(response) {
+            $("#loginBtn").addClass("disabled-btn");
+            $("#loginBtn").attr("disabled", true);
+        }
+
+        //	g-recaptcha 리셋
+        var resetCallback = function() {
+            grecaptcha.reset();
+        }
+
+    </script>
+</th:block>
+</html>
