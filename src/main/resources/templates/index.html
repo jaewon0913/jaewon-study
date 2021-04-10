@@ -4,9 +4,128 @@
       layout:decorator="~{layout/layout}">
 
 <th:block layout:fragment="content">
+    <link th:href="@{/css/main/freelancer.min.css}" rel="stylesheet" />
+    <link th:href="@{/css/main/index.css}" rel="stylesheet" />
+
     <!-- Begin Page Content -->
     <div class="container-fluid">
-        <h1>개발자 황재원</h1>
+
+        <!-- About Section -->
+        <section class="page-section portfolio" id="about">
+            <div class="container">
+
+                <!-- About Section Heading -->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">About Me<hr/></h2>
+
+                <!-- About Section Content -->
+                <div class="row" style = "color : black;">
+                    <div class="col-lg-auto">
+                        <h3>"신뢰주는 개발자"</h3><br/>
+                        <p>
+                            <strong>
+                                저는 저의 목표를 “신뢰를 주는 개발자"로 삼아 개발하고 있습니다.<br/>
+                                개발을 완료하고 사용자가 사용할 때 예상치 못한 장애가 발생할 경우 고객과 신뢰관계와 연결이 된다고 생각합니다.<br/>
+                                그렇기 때문에 항상 꼼꼼히 살펴서 최대한 에러가 발생하지 않도록 하겠습니다.<br/>
+                                경력은 시간이 지나면 쌓이지만 실력은 항상 공부해야 쌓인다고 합니다.<br/>
+                                저 또한 계속 공부하여 “신뢰를 주는 개발자"로서 남도록 하겠습니다.
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skill Section -->
+        <section class="page-section portfolio" id="skill">
+            <div class="container">
+
+                <!-- Skill Section Heading -->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Skill<hr/></h2>
+
+                <!-- Skill Grid Items -->
+                <div class = "skill">
+                    <div class="skill_content">
+                        <h2 class = "skill_title">Language</h2>
+                        <span class = "skill_content">
+                            <div class = "skill_box">
+                              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/java.svg} + ');'">
+                                <div class = "skill_label">기본</div>
+                              </div>
+                              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/javascript.png} + ');'">
+                                <div class = "skill_label">기본</div>
+                              </div>
+                            </div>
+                        </span>
+                        <br/>
+                        <h2 class = "skill_title">Web Skill</h2>
+                        <span class = "skill_content">
+                            <div class = "skill_box">
+                              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/css3_logo.png} + ');'">
+                                <div class = "skill_label">기본</div>
+                              </div>
+                              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/html5_logo.png} + ');'">
+                                <div class = "skill_label">기본</div>
+                              </div>
+                              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/javascript.png} + ');'">
+                                <div class = "skill_label">기본</div>
+                              </div>
+                              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/jquery_logo.png} + ');'">
+                                <div class = "skill_label">기본</div>
+                              </div>
+                            </div>
+                        </span>
+                        <br/>
+                        <h2 class = "skill_title">Framework</h2>
+                        <span class = "skill_content">
+            <div class = "skill_box">
+              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/spring_icon_logo.svg} + ');'">
+                <div class = "skill_label">기본</div>
+              </div>
+              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/springboot_logo.jpg} + ');'">
+                <div class = "skill_label">기초</div>
+              </div>
+            </div>
+          </span>
+                        <br/>
+                        <h2 class = "skill_title">DataBase</h2>
+                        <span class = "skill_content">
+            <div class = "skill_box">
+              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/oracle_img.png} + ');'">
+                <div class = "skill_label">기본</div>
+              </div>
+              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/mysql_img.png} + ');'">
+                <div class = "skill_label">기초</div>
+              </div>
+            </div>
+          </span>
+                        <br/>
+                        <h2 class = "skill_title">Operating System</h2>
+                        <span class = "skill_content">
+            <div class = "skill_box">
+              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/macos_img.png} + ');'">
+                <div class = "skill_label">기본</div>
+              </div>
+            </div>
+          </span>
+                        <br/>
+                        <h2 class = "skill_title">Etc</h2>
+                        <span class = "skill_content">
+            <div class = "skill_box">
+              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/github.png} + ');'">
+                <div class = "skill_label">기본</div>
+              </div>
+              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/aws_img.png} + ');'">
+                <div class = "skill_label">기초</div>
+              </div>
+            </div>
+          </span>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+            </div>
+        </section>
     </div>
+
 </th:block>
 </html>

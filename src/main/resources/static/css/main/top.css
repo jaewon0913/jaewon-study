@@ -1,0 +1,10 @@
+.typing-txt{display: none;}
+
+.typing ul li.on {
+    display: inline-block;
+    list-style-type:none;
+    list-style:none;
+    animation-name: cursor;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+}
