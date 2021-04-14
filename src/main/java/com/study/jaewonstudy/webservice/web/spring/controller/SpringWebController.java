@@ -21,7 +21,7 @@ public class SpringWebController {
     @RequestMapping("/recaptcha")
     public String recaptcha(){
 
-        return "/spring/recaptcha/recaptcha";
+        return "spring/recaptcha/recaptcha";
     }
 
     @GetMapping("/recaptcha/after")
@@ -31,6 +31,6 @@ public class SpringWebController {
 
         model.addAttribute("member", loginMember);
 
-        return "/spring/recaptcha/afterRecaptcha";
+        return "spring/recaptcha/afterRecaptcha";
     }
 }
