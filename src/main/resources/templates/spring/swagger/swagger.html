@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="~{layout/layout}">
+
+<th:block layout:fragment="content">
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+        <h1>Swagger 사용하기</h1>
+        <h3>정리 : <a href="https://dev-jwblog.tistory.com/20">개발블로그</a></h3>
+        <hr/>
+
+        <div>
+        	<h5><a href="/swagger-ui.html">스웨거 페이지 이동</a></h5>
+        </div>
+    </div>
+
+
+    <!-- jquery -->
+    <script th:src="@{/js/jquery-3.2.1.min.js}"></script>
+</th:block>
+</html>
