@@ -1,4 +1,4 @@
-### SpringBoot WebSerivce ![Build Status](https://travis-ci.com/jaewon0913/jaewon-study.svg?branch=main)
+### SpringBoot WebSerivce [![Build Status](https://travis-ci.com/jaewon0913/jaewon-study.svg?branch=main)](https://travis-ci.com/jaewon0913/jaewon-study)
 
 #### 개발환경
 * IDE : IntelliJ IDEA  
