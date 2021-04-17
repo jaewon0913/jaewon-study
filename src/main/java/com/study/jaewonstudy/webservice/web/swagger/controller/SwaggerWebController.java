@@ -14,6 +14,7 @@ public class SwaggerWebController {
     @GetMapping("/swagger")
     public String swagger() {
     	
-    	return "/spring/swagger/swagger";
+    	//return "/spring/swagger/swagger";     <-- 리눅스에서 파일위치를 찾지 못함
+    	return "spring/swagger/swagger";
     }
 }
