@@ -14,7 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/spring")
-@PropertySource("classpath:dataSource.properties")
+@PropertySource("file:/home/ec2-user/app/dataSoure.properties")
+//@PropertySource("classpath:dataSource.properties")
 public class SpringRestController {
 
     @Autowired
