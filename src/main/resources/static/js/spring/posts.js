@@ -1,4 +1,4 @@
-var main = {
+var posts = {
     init : function () {
         var _this = this;
         $('#btn-save').on('click', function () {
@@ -14,7 +14,7 @@ var main = {
 
         $.ajax({
             type: 'POST',
-            url: '/posts',
+            url: '/spring/post/save',
             dataType: 'json',
             contentType:'application/json; charset=utf-8',
             data: JSON.stringify(data)
@@ -28,4 +28,4 @@ var main = {
 
 };
 
-main.init();
+posts.init();

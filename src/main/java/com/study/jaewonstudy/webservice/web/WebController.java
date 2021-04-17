@@ -18,10 +18,4 @@ public class WebController {
         return "index";
     }
 
-    @GetMapping("/postMain")
-    public String postMain(Model model){
-        model.addAttribute("posts", postsService.findAllDesc());
-        return "posts/main";
-    }
-
 }
