@@ -14,6 +14,6 @@ public class SwaggerWebController {
     @GetMapping("/swagger")
     public String swagger() {
     	
-    	return "spring/swagger/swagger";
+    	return "/spring/swagger/swagger";
     }
 }
