@@ -15,5 +15,5 @@
 > ##### 현재 사용 중인 기술
 * springboot
 * thymeleaf
-* AWS (EC2 / RDS)
+* AWS (EC2 / RDS / S3 / CodeDeploy)
 * travis ci
