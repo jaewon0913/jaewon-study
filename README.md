@@ -12,8 +12,9 @@
 
 * #### 공부하면서 이것저것 사용 및 적용해보는 사이트 입니다.
 
-> ##### 현재 사용 중인 기술
+> ##### 현재 사용 중인 또는 사용해본 기술
 * springboot
 * thymeleaf
+* Swagger
 * AWS (EC2 / RDS / S3 / CodeDeploy)
 * travis ci
