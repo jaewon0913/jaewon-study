@@ -14,7 +14,11 @@
 
 > ##### 현재 사용 중인 또는 사용해본 기술
 * springboot
+* MySql
 * thymeleaf
+* Google reCAPTCHA V2
 * Swagger
+* JPA
 * AWS (EC2 / RDS / S3 / CodeDeploy)
 * travis ci
+* NGINX
