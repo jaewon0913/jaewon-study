@@ -14,7 +14,7 @@
 
 > ##### 현재 사용 중인 또는 사용해본 기술
 * springboot
-* MySql
+* Maria DB
 * thymeleaf
 * Google reCAPTCHA V2
 * Swagger
