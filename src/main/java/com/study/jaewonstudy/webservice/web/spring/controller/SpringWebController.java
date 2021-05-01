@@ -3,7 +3,10 @@ package com.study.jaewonstudy.webservice.web.spring.controller;
 import com.study.jaewonstudy.webservice.web.spring.model.request.Member;
 import com.study.jaewonstudy.webservice.web.spring.service.MemberService;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@AllArgsConstructor
+@NoArgsConstructor
 @RequestMapping("/spring")
 public class SpringWebController {
 
