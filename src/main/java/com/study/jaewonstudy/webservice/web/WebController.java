@@ -13,4 +13,10 @@ public class WebController {
 
         return "index";
     }
+
+    @GetMapping("/jaewon/myprofile")
+    public String myprofile(){
+
+        return "jaewon/myprofile";
+    }
 }

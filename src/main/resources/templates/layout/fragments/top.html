@@ -11,20 +11,6 @@
             <i class="fa fa-bars"></i>
         </button>
 
-        <!-- Masthead Heading -->
-        <div class = "typing-txt" style = "display :none;">
-            <ul>
-                <li>Developer 황재원의 개발 사이트입니다!!!</li>
-                <li>공부하면서 이것저것 사용 및 적용해보고 있습니다.</li>
-            </ul>
-        </div>
-        <div class = "typing">
-            <ul style = "list-style:none; margin-bottom: 0px;">
-                <li class="masthead-heading text-uppercase mb-0"></li>
-                <li class="masthead-heading text-uppercase mb-0"></li>
-            </ul>
-        </div>
-
         <!-- Topbar Navbar -->
         <ul class="navbar-nav ml-auto">
 
@@ -60,12 +46,12 @@
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="mr-2 d-none d-lg-inline text-gray-600 small">황재원</span>
                     <img class="img-profile rounded-circle"
-                         src="/bootstrap/img/undraw_profile.svg">
+                         src="/images/index/jaewon/myprofile.png">
                 </a>
                 <!-- Dropdown - User Information -->
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                      aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="/">
+                    <a class="dropdown-item" href="/jaewon/myprofile">
                         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                         Profile
                     </a>
@@ -76,11 +62,7 @@
 
     </nav>
 
-    <!-- css -->
-    <link th:href="@{/css/main/top.css}" rel="stylesheet" />
-
     <!-- jQuery -->
     <script th:src="@{/js/jquery-3.2.1.min.js}"></script>
-    <script th:src="@{/js/main/top.js}"></script>
 </th:block>
 </html>

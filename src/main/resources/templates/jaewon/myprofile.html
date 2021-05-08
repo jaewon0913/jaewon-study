@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="~{layout/layout}">
+
+<th:block layout:fragment="content">
+    <link th:href="@{/css/main/freelancer.min.css}" rel="stylesheet" />
+    <link th:href="@{/css/main/myprofile.css}" rel="stylesheet" />
+
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- About Section -->
+        <section class="page-section portfolio" id="about">
+            <div class="container">
+
+                <!-- About Section Heading -->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">About Me<hr/></h2>
+
+                <div class = "skill" th:style = "'padding: 0'">
+                    <div class="skill_content">
+                        <span class = "skill_content">
+                            <div class = "skill_box">
+                              <div class = "myprofile" th:style = "'width: 150px; height: 200px; background-image: url('+ @{/images/index/jaewon/hjw.jpeg} + ');'">
+                              </div>
+                              <div class = "myprofile" th:style = "'width: 500px; height: 200px;'">
+                                  <div class = "info">
+                                      <ul>
+                                          <li>📧  Email: &nbsp&nbsp<a href="mailto:jaewon9937@gmail.com">jaewon9937@gmail.com</a></li><br/>
+                                          <li>💻  Github:  &nbsp&nbsp<a href="https://github.com/jaewon0913">https://github.com/jaewon0913</a></li><br/>
+                                          <li>✍️  Blog:  &nbsp&nbsp<a href="https://dev-jwblog.tistory.com">https://dev-jwblog.tistory.com</a></li>
+                                      </ul>
+                                  </div>
+                              </div>
+                            </div>
+                        </span>
+                        <br/>
+                    </div>
+                </div>
+
+
+                <!-- About Section Content -->
+                <div class="row" style = "color : black;">
+                    <div class="col-lg-auto">
+                        <h3>"간단 소개"</h3><br/>
+                        <p>
+                            <strong>
+                                안녕하세요. 경력 1년차 서버/웹 개발자 황재원 입니다.<br/><br/>
+
+                                제 스스로 성실하다고 생각하지는 않습니다. 하지만 도전하는 정신으로 다 나가떨어질때까지 앞만 보고 달려가겠습니다.<br/><br/>
+
+                                솔선수범하는 척, 노력하는 척, 이런 가식적인 모습은 보여드리지 않겠습니다.<br/>
+                                그러나, 개발에 대해서는 항상 창의적인 모습과 책임감 있는 모습을 보여드릴 것이며, 맡은 업무는 묵묵히 파고들어 어떤 일이든지 성공적으로 업무를 처리하겠습니다.<br/><br/>
+
+                                남에게 얹혀가는 성공 보다는 자신의 코드와 결과물에 신뢰를 바탕으로 맡은 프로젝트를 성공으로 회사에 기여하겠습니다.
+                            </strong>
+                        </p>
+                        <br/>
+                        <h3>"신뢰주는 개발자"</h3><br/>
+                        <p>
+                            <strong>
+                                저는 저의 목표를 “신뢰를 주는 개발자"로 삼아 개발하고 있습니다.<br/>
+                                개발을 완료하고 사용자가 사용할 때 예상치 못한 장애가 발생할 경우 고객과 신뢰관계와 연결이 된다고 생각합니다.<br/>
+                                그렇기 때문에 항상 꼼꼼히 살펴서 최대한 에러가 발생하지 않도록 하겠습니다.<br/>
+                                경력은 시간이 지나면 쌓이지만 실력은 항상 공부해야 쌓인다고 합니다.<br/>
+                                저 또한 계속 공부하여 “신뢰를 주는 개발자"로서 남도록 하겠습니다.
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section portfolio" id="ability">
+            <div class="container">
+
+                <!-- About Section Heading -->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">핵심 역량<hr/></h2>
+
+                <!-- About Section Content -->
+                <div class="row" style = "color : black;">
+                    <div class="col-lg-auto">
+                        <ul>
+                            <li><strong>Java, SpringFrameWork(SpringBoot) 기반의 웹 어플리케이션 개발할 수 있습니다.</strong></li>
+                            <li><strong>Oracle, MySql을 사용하여 쿼리를 작성할 수 있습니다.</strong></li>
+                            <li><strong>AWS, Travis CI를 이용하여 빌드/배포를 자동할 수 있습니다.</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section portfolio" id="career">
+            <div class="container">
+
+                <!-- About Section Heading -->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">경력 사항<hr/></h2>
+
+                <!-- About Section Content -->
+                <div class="row" style = "color : black;">
+                    <div class="col-lg-auto">
+                        <ul>
+                            <li>
+                                <strong>LG U+ 멤버스 - 운영</strong><br/>
+                                2021.04 ~ <br/>
+                                LG U+ 멤버스 운영.<br/>
+                                LG U+ 멤버스 앱 내 Grip(라이브쇼핑) 솔루션 연동 개발.<br/>
+                                Java, Oracle, Struts2 사용
+                            </li><br/>
+                            <li>
+                                <strong>LG U+ 쿠폰 Enabler 솔루션 운영</strong><br/>
+                                2021.02 ~ <br/>
+                                LG U+ 쿠폰 Enabler 솔루션 운영.<br/>
+                                쿠폰 발급 및 처리 솔루션.<br/>
+                                Java, Oracle, SOAP 사용
+                            </li><br/>
+                            <li>
+                                <strong>아이스크림 홈런 - 에코시스템 개발</strong>
+                                2020.09 ~ 2021.02<br/>
+                                에코시스템 중 판매시스템 내에 판매자의 판매현황 및 프로모션 페이지, 정보센터(공지사항, FAQ, 1:1문의) 개발.<br/>
+                                Admin 페이지 배너 관리 페이지 개발.<br/>
+                                Spring Framework, Maria DB, Java, JavaScript, JSP 사용.
+                            </li><br/>
+                            <li>
+                                <strong>SK 매직 - IoT 서비스 운영</strong>
+                                2020.10 ~ 2021.02<br/>
+                                SK 매직 내 가전 IoT 서비스 운영.<br/>
+                                가전 IoT 제어 및 화면에 대한 Vue.js 를 사용한 SPA 개발.<br/>
+                                Redis, MqTT, Long Polling 을 사용한 가전 제어.<br/>
+                                SpringBoot, Oracle, Java, Vue.JS, Redis, MqTT 사용.
+                            </li><br/>
+                            <li>
+                                <strong>SKT - EveryAir 운영</strong>
+                                2020.03 ~ 2020.09<br/>
+                                SKT 미세먼지 앱 에브리에어 운영.<br/>
+                                에어코리아 OpenApi 연동.<br/>
+                                Admin 페이지 수정.<br/>
+                                Spring Framework, Java , Oracle 사용.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skill Section -->
+        <section class="page-section portfolio" id="skill">
+            <div class="container">
+
+                <!-- Skill Section Heading -->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Skill<hr/></h2>
+
+                <!-- Skill Grid Items -->
+                <div class = "skill">
+                    <div class="skill_content">
+                        <h2 class = "skill_title">Language</h2>
+                        <span class = "skill_content">
+                            <div class = "skill_box">
+                              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/java_logo.png} + ');'">
+                                <div class = "skill_label">기본</div>
+                              </div>
+                              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/javascript.png} + ');'">
+                                <div class = "skill_label">기본</div>
+                              </div>
+                            </div>
+                        </span>
+                        <br/>
+                        <h2 class = "skill_title">Web Skill</h2>
+                        <span class = "skill_content">
+                            <div class = "skill_box">
+                              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/css3_logo.png} + ');'">
+                                <div class = "skill_label">기본</div>
+                              </div>
+                              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/html5_logo.png} + ');'">
+                                <div class = "skill_label">기본</div>
+                              </div>
+                              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/javascript.png} + ');'">
+                                <div class = "skill_label">기본</div>
+                              </div>
+                              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/jquery_logo.png} + ');'">
+                                <div class = "skill_label">기본</div>
+                              </div>
+                            </div>
+                        </span>
+                        <br/>
+                        <h2 class = "skill_title">Framework</h2>
+                        <span class = "skill_content">
+            <div class = "skill_box">
+              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/spring_icon_logo.svg} + ');'">
+                <div class = "skill_label">기본</div>
+              </div>
+              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/springboot_logo.jpg} + ');'">
+                <div class = "skill_label">기초</div>
+              </div>
+            </div>
+          </span>
+                        <br/>
+                        <h2 class = "skill_title">DataBase</h2>
+                        <span class = "skill_content">
+            <div class = "skill_box">
+              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/oracle_img.png} + ');'">
+                <div class = "skill_label">기본</div>
+              </div>
+              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/mysql_img.png} + ');'">
+                <div class = "skill_label">기초</div>
+              </div>
+            </div>
+          </span>
+                        <br/>
+                        <h2 class = "skill_title">Operating System</h2>
+                        <span class = "skill_content">
+            <div class = "skill_box">
+              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/macos_img.png} + ');'">
+                <div class = "skill_label">기본</div>
+              </div>
+            </div>
+          </span>
+                        <br/>
+                        <h2 class = "skill_title">Etc</h2>
+                        <span class = "skill_content">
+            <div class = "skill_box">
+              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/github.png} + ');'">
+                <div class = "skill_label">기본</div>
+              </div>
+              <div class = "skill_img_container" th:style = "'background-image: url('+ @{/images/index/skill/aws_img.png} + ');'">
+                <div class = "skill_label">기초</div>
+              </div>
+            </div>
+          </span>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+            </div>
+        </section>
+    </div>
+
+</th:block>
+</html>

@@ -1,0 +1,26 @@
+.typing-div{
+    border-radius: 2em;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 20px;
+}
+
+.typing-txt{display: none;}
+
+.typing ul {
+    color: white;
+    font-weight: bold;
+}
+
+.typing ul li.on {
+    display: inline-block;
+    list-style-type:none;
+    list-style:none;
+    animation-name: cursor;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+}
