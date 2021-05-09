@@ -19,4 +19,10 @@ public class WebController {
 
         return "jaewon/myprofile";
     }
+
+    @GetMapping("/vue")
+    public String test(){
+
+        return "vue/index";
+    }
 }

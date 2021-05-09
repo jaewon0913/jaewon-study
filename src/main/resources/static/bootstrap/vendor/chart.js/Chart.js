@@ -5719,7 +5719,7 @@ var controller_doughnut = core_datasetController.extend({
 
 core_defaults._set('horizontalBar', {
 	hover: {
-		mode: 'index',
+		mode: 'templates.index',
 		axis: 'y'
 	},
 
@@ -5746,7 +5746,7 @@ core_defaults._set('horizontalBar', {
 	},
 
 	tooltips: {
-		mode: 'index',
+		mode: 'templates.index',
 		axis: 'y'
 	}
 });
@@ -9884,7 +9884,7 @@ helpers$1.extend(Chart.prototype, /** @lends Chart */ {
 			}
 		}
 
-		result.sort(compare2Level('order', 'index'));
+		result.sort(compare2Level('order', 'templates.index'));
 
 		return result;
 	},
