@@ -2,10 +2,10 @@ package com.study.jaewonstudy.webservice.web;
 
 import lombok.AllArgsConstructor;
 import org.springframework.core.env.Environment;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
+import java.util.List;
 
 @RestController
 @AllArgsConstructor

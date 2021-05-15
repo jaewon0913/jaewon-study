@@ -33,7 +33,7 @@ public class SwaggerConfig {
                 .useDefaultResponseMessages(false)
                 .groupName(version)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.study.jaewonstudy.webservice.web.swagger.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.study.jaewonstudy.webservice.web.spring.swagger.controller"))
                 .paths(PathSelectors.ant("/spring/swagger/v1/api/**"))
                 .build()
                 .apiInfo(apiInfo(title, version))
@@ -50,7 +50,7 @@ public class SwaggerConfig {
                 .useDefaultResponseMessages(false)
                 .groupName(version)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.study.jaewonstudy.webservice.web.swagger.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.study.jaewonstudy.webservice.web.spring.swagger.controller"))
                 .paths(PathSelectors.ant("/spring/swagger/v2/api/**"))
                 .build()
                 .apiInfo(apiInfo(title, version));

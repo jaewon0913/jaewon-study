@@ -21,7 +21,7 @@ public class WebController {
     }
 
     @GetMapping("/vue")
-    public String test(){
+    public String vue(){
 
         return "vue/index";
     }
