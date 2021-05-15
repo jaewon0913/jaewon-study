@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="~{layout/layout}">
+
+<th:block layout:fragment="content">
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+        <h1>AES128 암/복호화 사용하기</h1>
+        <h3>정리 : <a href="https://dev-jwblog.tistory.com/20">개발블로그</a></h3>
+        <hr/>
+
+        <div>
+        	<h5 style="color: black">암호화 하기</h5>
+            <p>암호화 할 텍스트</p>
+            <input type="text" id="encrypt" style="width: 450px;" />
+            <button id="goEncrpyt">암호화</button>
+            <p>암호화 결과</p>
+            <input type="text" id="resultEncrypt" style="width: 450px;" />
+        </div>
+
+        <br/><br/>
+
+        <div>
+            <h5 style="color: black">복호화 하기</h5>
+            <p>복호화 할 텍스트</p>
+            <input type="text" id="decrypt" style="width: 450px;" />
+            <button id="goDecrpyt">복호화</button>
+            <p>복호화 결과</p>
+            <input type="text" id="resultDecrypt" style="width: 450px;" />
+        </div>
+    </div>
+
+    <!-- jquery -->
+    <script th:src="@{/js/jquery-3.2.1.min.js}"></script>
+    <script>
+        $("#goEncrpyt").click(function () {
+            var text = encodeURIComponent($("#encrypt").val());
+
+            $.ajax({
+                type: 'GET',
+                url: '/java/aes/encrypt?text=' + text,
+                success: function(data){
+                    $("#resultEncrypt").val(data);
+                },
+                error: function(err) {
+                    alert("에러" + err.toString());
+                }
+            });
+        });
+
+        $("#goDecrpyt").click(function () {
+            var text = encodeURIComponent($("#decrypt").val());
+
+            $.ajax({
+                type: 'GET',
+                url: '/java/aes/decrypt?text=' + text,
+                success: function(data){
+                    $("#resultDecrypt").val(data);
+                },
+                error: function(err) {
+                    alert("에러" + err.toString());
+                }
+            });
+        });
+    </script>
+</th:block>
+</html>
