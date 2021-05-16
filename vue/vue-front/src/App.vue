@@ -38,7 +38,7 @@ export default {
 <style>
 body {
   text-align: center;
-  backgroud-color: #F6F6F6
+  background-color: #F6F6F6
 }
 
 input {

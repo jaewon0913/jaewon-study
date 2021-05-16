@@ -1,6 +1,7 @@
 <template>
   <!-- html -->
   <div>
+      <h1>아직 개발 중 입니다.</h1>
       <h1>TODO It!</h1>
   </div>
 </template>
@@ -10,6 +11,6 @@
 h1 {
     color: #2F3B52;
     font-weight: 900;
-    margin: 2.5rem 0 1.5rem;
+    margin: 2.5rem 0 1.5rem; 
 }
 </style>
