@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <style type="text/css">
+    html, body, #fullheight {
+        min-height: 100% !important;
+        height: 100%;
+        margin: 0;
+    }
+
     .full-screen {
         background-color: #333333;
         width: 100%;
@@ -15,7 +21,7 @@
     }
 
     .container {
-        padding-top: 4em;
+        padding-top: 7em;
         width: 50%;
         display: block;
         margin: 0 auto;
@@ -62,20 +68,23 @@
     }
 </style>
 <!-- jquery -->
-<script th:src="@{/js/jquery-3.2.1.min.js}"></script>
+<script src="/js/jquery-3.2.1.min.js"></script>
 
 <body>
+<section id="fullheight">
+    <div class="full-screen">
+        <div class='container'>
+            <span class="error-num">5</span>
+            <div class='eye'></div>
+            <div class='eye'></div>
 
-<div class="full-screen">
-    <div class='container'>
-        <span class="error-num">5</span>
-        <div class='eye'></div>
-        <div class='eye'></div>
-
-        <p class="sub-text">Oh eyeballs! Something went wrong. We're <span class="italic">looking</span> to see what happened.</p>
-        <a href="/">Go Main</a>
+            <p class="sub-text">Oh eyeballs! Something went wrong. We're <span class="italic">looking</span> to see what happened.</p>
+            <a href="/">Go Main</a>
+        </div>
     </div>
-</div>
+</section>
+</body>
+
 <script type="text/javascript">
     $(".full-screen").mousemove(function (event) {
         var eye = $(".eye");
@@ -92,5 +101,4 @@
     });
 
 </script>
-</body>
 </html>
