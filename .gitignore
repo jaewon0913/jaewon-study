@@ -38,3 +38,6 @@ out/
 
 ### ignore properties ###
 dataSource.properties
+
+### Vue ###
+/vue

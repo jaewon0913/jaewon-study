@@ -22,3 +22,4 @@
 * AWS (EC2 / RDS / S3 / CodeDeploy)
 * travis ci
 * NGINX
+* Vue.js
