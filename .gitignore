@@ -37,7 +37,7 @@ out/
 .vscode/
 
 ### ignore properties ###
-dataSource.properties
+application-*.properties
 
 ### Vue ###
 /vue
