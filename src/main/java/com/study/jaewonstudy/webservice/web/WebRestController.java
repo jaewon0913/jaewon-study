@@ -1,22 +1,26 @@
 package com.study.jaewonstudy.webservice.web;
 
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 import java.util.List;
 
+@RequiredArgsConstructor
 @RestController
-@AllArgsConstructor
 public class WebRestController {
 
-    private Environment env;
+    private final Environment env;
 
     @GetMapping("/profile")
     public String getProfile(){
-        return Arrays.stream(env.getActiveProfiles())
-                .findFirst()
-                .orElse("");
+        List<String> profiles = Arrays.asList(env.getActiveProfiles());
+        List<String> realProfiles = Arrays.asList("real", "real1", "real2");
+
+        String defaultProfile = profiles.isEmpty()? "default" : profiles.get(0);
+
+        return profiles.stream().filter(realProfiles::contains).findAny().orElse(defaultProfile);
     }
 }

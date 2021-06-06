@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source:  /
-    destination: /home/ec2-user/app/nonstop/springboot-webservice/
+    destination: /home/ec2-user/app/step3/springboot-webservice/
     overwrtie: yes
 
 # 파일 권한 추가
@@ -14,5 +14,14 @@ permission:
 
 hooks:
   AfterInstall: # 배포가 끝나면 아래 명령어를 실행
-    - location: execute-deploy.sh
-      timeout: 180
+    - location: deploy.sh
+      timeout: 120
+      runas: ec2-user
+  ApplicationStart: # nginx와 연결되어 있지 않은 Port로 새 버전의 스프링부트를 시작
+    - location: start.sh
+      timeout: 120
+      runas: ec2-user
+  ValidateService: # 새 스프링부트가 정상적으로 실행됐는지 확인
+    - location: health.sh
+      timeout: 120
+      runas: ec2-user
