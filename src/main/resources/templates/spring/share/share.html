@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="~{layout/layout}">
+
+<th:block layout:fragment="content">
+
+    <link th:href="@{/css/main/myprofile.css}" rel="stylesheet" />
+
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+        <h1>공유하기(카카오API, ClipBoard)</h1>
+        <h3>정리 : <a href="https://dev-jwblog.tistory.com/56">개발블로그</a></h3>
+        <hr/>
+
+        <h5>아래 버튼을 클릭하시면 공유하기가 됩니다.</h5>
+
+        <span class = "skill_content">
+            <div class = "skill_box">
+                <div class = "skill_img_container" onclick="kakaoShare();"
+                     th:style = "'background-image: url('+ @{/images/img/kakao_btn.png} + ');'">
+                    <div class = "skill_label">카카오톡공유</div>
+                </div>
+                <div class = "skill_img_container" onclick="clipboardShare();"
+                     th:style = "'background-image: url('+ @{/images/img/url_btn.png} + ');'">
+                    <div class = "skill_label">URL복사</div>
+                </div>
+            </div>
+        </span>
+    </div>
+
+
+    <!-- jquery -->
+    <script th:src="@{/js/jquery-3.2.1.min.js}"></script>
+    <!-- kakao -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
+    <script th:inline="javascript">
+        // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+        Kakao.init('f008a7fc7cb0ebe7b551fc9552475448');
+
+        // SDK 초기화 여부를 판단합니다.
+        console.log(Kakao.isInitialized());
+
+        /*<![CDATA[*/
+        var myUrl = [[${myUrl}]]
+
+        //  카카오 공유하기
+        function kakaoShare() {
+            Kakao.Link.sendDefault({
+                objectType: 'feed',
+                content: {
+                    title: '황재원의 공부사이트',
+                    description: '개발자 황재원의 개발공부용 사이트입니다.',
+                    imageUrl:
+                        'http://jaewon-study.com/images/index/jaewon/previewImg.jpeg',
+                    link: {
+                        mobileWebUrl: myUrl,
+                        webUrl: myUrl,
+                    },
+                },
+                buttons: [
+                    {
+                        title: '웹으로 보기',
+                        link: {
+                            mobileWebUrl: myUrl,
+                            webUrl: myUrl,
+                        },
+                    }
+                ],
+                installTalk: true,
+            })
+        }
+
+        //  클립보드 복사하기
+        function clipboardShare() {
+
+            var tmpTextarea = document.createElement('textarea');
+            tmpTextarea.value = myUrl;
+            tmpTextarea.setAttribute('readonly', '');
+            tmpTextarea.style.position = 'absolute';
+            tmpTextarea.style.left = '-9999px';
+
+            document.body.appendChild(tmpTextarea);
+            tmpTextarea.select();
+            tmpTextarea.setSelectionRange(0, 9999);  // 셀렉트 범위 설정
+
+            var successChk = document.execCommand('copy');
+            document.body.removeChild(tmpTextarea);
+
+            if(!successChk){
+                alert("클립보드 복사에 실패하였습니다.");
+            } else {
+                alert("클립보드에 복사가 완료되었습니다.");
+            }
+        }
+
+        /*]]>*/
+    </script>
+
+    <script type="text/javascript">
+
+
+    </script>
+</th:block>
+</html>
